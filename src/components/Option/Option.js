@@ -1,11 +1,13 @@
 import React from 'react';
-
-const Option = ({ option }) => {
-    console.log(option)
+import { ToastContainer } from 'react-toastify';
+const Option = ({ option, handleTrueFalse }) => {
     return (
-        <button className='border border-teal-500 w-full my-3 px-2 py-4 rounded-md'>
+        <>
+            <button onClick={() => handleTrueFalse(option)} className='border border-teal-500 w-full my-3 px-2 py-4 rounded-md'>
                 <p className='text-teal-500'>{option}</p>
-        </button>
+            </button>
+            <ToastContainer position="top-center" theme="light" />
+        </>
     );
 };
 
