@@ -1,19 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='container mx-auto'>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to='/home'>Home</NavLink>
+        <div className=' bg-[#ddd]'>
+            <nav className='container mx-auto py-4 flex justify-between items-center'>
+                <p className='text-3xl font-medium'>
+                    <Link to='/'>Playbuzz</Link>
+                </p>
+                <ul className='md:flex'>
+                    <li className='ml-10'>
+                        <NavLink className='text-xl font-medium' to='/home'>Home</NavLink>
                     </li>
-                    <li>
-                        <NavLink to='/statistics'>Statistics</NavLink>
+                    <li className='ml-10'>
+                        <NavLink className='text-xl font-medium' to='/statistics'>Statistics</NavLink>
                     </li>
-                    <li>
-                        <NavLink to='/blog'>Blog</NavLink>
+                    <li className='ml-10'>
+                        <NavLink className='text-xl font-medium' to='/blog'>Blog</NavLink>
                     </li>
                 </ul>
             </nav>
