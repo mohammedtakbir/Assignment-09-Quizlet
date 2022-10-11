@@ -8,9 +8,9 @@ const Question = ({ q }) => {
 
     const handleTrueFalse = (selectedOption) => {
         if (selectedOption === correctAnswer) {
-            toast.success('true', { autoClose: 500 })
+            toast.success('Correct Answer', { autoClose: 500 })
         } else {
-            toast.error('false', { autoClose: 500 })
+            toast.error('Wrong Answer', { autoClose: 500 })
         }
     };
     const handleCorrectAns = (correctAns) => {
