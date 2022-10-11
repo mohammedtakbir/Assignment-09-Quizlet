@@ -9,6 +9,7 @@ import Main from "../layout/Main";
 export const router = createBrowserRouter([
     {
         path: '/',
+        errorElement: <ErrorPage />,
         element: <Main />,
         children: [
             {
@@ -33,10 +34,6 @@ export const router = createBrowserRouter([
                 path: '/quiz/:id',
                 loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
                 element: <Quiz />
-            },
-            {
-                path: '*',
-                element: <ErrorPage />
             }
         ]
     }
