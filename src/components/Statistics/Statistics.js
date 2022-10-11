@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
     const quizData = useLoaderData().data;
@@ -10,7 +10,7 @@ const Statistics = () => {
         getData.push(singleData);
     };
     return (
-        <div className='flex justify-center mt-[200px] max-w-[700px] mx-auto'>
+        <div className='flex justify-center mt-[150px] max-w-[700px] mx-auto md:pr-0 pr-5'>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart width={500} height={400} data={getData}>
                     <Line type="monotone" dataKey="total" stroke="#82ca9d" />

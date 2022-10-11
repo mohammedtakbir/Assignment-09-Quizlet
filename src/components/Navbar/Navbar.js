@@ -7,18 +7,18 @@ const Navbar = () => {
     return (
         <div className=' bg-[#f1f5f6]'>
             <nav className='md:container mx-auto py-5 flex justify-between items-center relative'>
-                <p className='text-3xl font-medium md:pl-0 pl-3'>
-                    <Link to='/'>Playbuzz</Link>
+                <p className='md:text-4xl text-3xl font-semibold md:pl-0 pl-3'>
+                    <Link to='/' className='text-teal-400'>Quizlet</Link>
                 </p>
-                <ul className={`md:flex md:justify-end md:static absolute duration-300 bg-[#f1f5f6] w-full text-center ${open ? 'top-14' : 'top-[-200px]'}`}>
+                <ul className={`md:flex md:justify-end md:static absolute duration-300 bg-[#f1f5f6] w-full text-center z-10 ${open ? 'top-14' : 'top-[-200px]'}`}>
                     <li className='md:ml-10 md:mb-0 mb-4'>
-                        <NavLink className='text-xl font-medium' to='/home'>Home</NavLink>
+                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/home'>Home</NavLink>
                     </li>
                     <li className='md:ml-10 md:mb-0 mb-4'>
-                        <NavLink className='text-xl font-medium' to='/statistics'>Statistics</NavLink>
+                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/statistics'>Statistics</NavLink>
                     </li>
                     <li className='md:ml-10 md:mb-0 mb-5'>
-                        <NavLink className='text-xl font-medium' to='/blog'>Blog</NavLink>
+                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/blog'>Blog</NavLink>
                     </li>
                 </ul>
                 <div className='md:hidden md:pr-0 pr-3'>

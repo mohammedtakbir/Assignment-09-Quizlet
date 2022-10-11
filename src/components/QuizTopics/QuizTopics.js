@@ -5,7 +5,7 @@ const quizTopics = ({ quizTopic }) => {
     const { logo, name, total, id } = quizTopic;
     return (
         <div className='p-5 shadow-md rounded-md'>
-            <img className='bg-[#ddd] rounded-md' src={logo} alt="" />
+            <img className='bg-[#dfdfdf] rounded-md' src={logo} alt="" />
             <p className='text-2xl font-medium mt-4 mb-3'>{name}</p>
             <p className='font-medium'>Total Quiz: {total}</p>
             <Link to={`/quiz/${id}`}>

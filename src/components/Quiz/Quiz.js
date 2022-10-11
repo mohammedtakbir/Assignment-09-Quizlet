@@ -10,9 +10,10 @@ const Quiz = () => {
             <h3 className='text-center font-bold text-3xl mt-14 mb-5 text-teal-500'>Quiz of {name}</h3>
             <div>
                 {
-                    questions.map(q => <Question
+                    questions.map((q, index) => <Question
                         q={q}
                         key={q.id}
+                        index={index}
                     />)
                 }
             </div>
