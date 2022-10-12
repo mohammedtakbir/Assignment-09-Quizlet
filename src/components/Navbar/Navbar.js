@@ -12,20 +12,31 @@ const Navbar = () => {
                 </p>
                 <ul className={`md:flex md:justify-end md:static absolute duration-300 bg-[#f1f5f6] w-full text-center z-10 ${open ? 'top-14' : 'top-[-200px]'}`}>
                     <li className='md:ml-10 md:mb-0 mb-4'>
-                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/home'>Home</NavLink>
+                        <NavLink style={({ isActive }) => {
+                            return isActive ? { textDecoration: 'underLine' } : undefined
+                        }} className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/home'>Home</NavLink>
                     </li>
                     <li className='md:ml-10 md:mb-0 mb-4'>
-                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/statistics'>Statistics</NavLink>
+                        <NavLink style={({ isActive }) => {
+                            return isActive ? { textDecoration: 'underLine' } : undefined
+                        }} className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/topics'>Topics</NavLink>
+                    </li>
+                    <li className='md:ml-10 md:mb-0 mb-4'>
+                        <NavLink style={({ isActive }) => {
+                            return isActive ? { textDecoration: 'underLine' } : undefined
+                        }} className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/statistics'>Statistics</NavLink>
                     </li>
                     <li className='md:ml-10 md:mb-0 mb-5'>
-                        <NavLink className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/blog'>Blog</NavLink>
+                        <NavLink style={({ isActive }) => {
+                            return isActive ? { textDecoration: 'underLine' } : undefined
+                        }} className='lg:text-2xl md:text-xl text-lg font-medium text-teal-500' to='/blog'>Blog</NavLink>
                     </li>
                 </ul>
                 <div className='md:hidden md:pr-0 pr-3'>
                     {
-                        open ? 
-                        <XMarkIcon onClick={() => setOpen(!open)} className="h-9 w-9 text-black cursor-pointer" /> :
-                        <Bars3Icon onClick={() => setOpen(!open)} className="h-9 w-9 text-black cursor-pointer" />
+                        open ?
+                            <XMarkIcon onClick={() => setOpen(!open)} className="h-9 w-9 text-black cursor-pointer" /> :
+                            <Bars3Icon onClick={() => setOpen(!open)} className="h-9 w-9 text-black cursor-pointer" />
                     }
                 </div>
             </nav>
