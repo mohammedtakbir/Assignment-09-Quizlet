@@ -40,13 +40,3 @@ const Question = ({ q, index }) => {
 };
 
 export default Question;
-
-/* 
-const quizData = useLoaderData().data;
-    let getData = [];
-    for (const data of quizData) {
-        const singleData = { name: data.name, total: data.total };
-        getData.push(singleData);
-    };
-
-*/
