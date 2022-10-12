@@ -24,7 +24,7 @@ const Question = ({ q, index }) => {
                 <span dangerouslySetInnerHTML={{ __html: question }}></span>
             </p>
             <button onClick={() => handleCorrectAns(correctAnswer)} className='absolute top-[30px] right-[20px]'>
-                <EyeIcon className="h-5 w-5 text-black inline ml-1" />
+                <EyeIcon className="h-5 w-5 text-teal-500 inline ml-1" />
             </button>
             <div>
                 {

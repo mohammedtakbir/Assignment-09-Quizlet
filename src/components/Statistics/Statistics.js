@@ -22,7 +22,7 @@ const Statistics = () => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-            <h1 className='mb-10 text-center text-2xl font-semibold mt-5'>Total Quiz for each topic.</h1>
+            <h1 className='mb-10 text-center text-2xl font-semibold mt-5 text-teal-500'>Total Quiz for each topic...</h1>
         </div>
     );
 };
