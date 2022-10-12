@@ -15,7 +15,7 @@ const Question = ({ q, index }) => {
         toast.info(`Correct Answer: ${correctAns}`, { autoClose: 3000 });
     };
     return (
-        <div className='max-w-[800px] md:mx-auto mx-5 shadow-lg px-7 pb-7 my-10 rounded-lg relative bg-[#f1f5f6]'>
+        <div className='max-w-[700px] md:mx-auto mx-5 shadow-lg px-7 pb-6 my-10 rounded-lg relative bg-teal-50'>
             <p className='pt-10 text-center mb-3 text-2xl text-teal-500'>
                 <span className='font-semibold'>Quiz: </span>
                 <span className='mr-3 font-semibold'>{index === 0 ? 1 : index + 1}</span>

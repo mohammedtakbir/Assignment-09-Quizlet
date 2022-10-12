@@ -7,7 +7,7 @@ const Quiz = () => {
     const { name, questions } = quiz.data;
     return (
         <div className='container mx-auto'>
-            <h3 className='text-center font-bold text-3xl mt-14 mb-5 text-teal-500'>Quiz of {name}</h3>
+            <h3 className='text-center font-bold text-3xl mt-12 mb-5 text-teal-500'>Quiz of {name}</h3>
             <div>
                 {
                     questions.map((q, index) => <Question

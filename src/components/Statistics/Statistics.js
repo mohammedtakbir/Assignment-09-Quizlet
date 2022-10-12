@@ -10,16 +10,19 @@ const Statistics = () => {
         getData.push(singleData);
     };
     return (
-        <div className='flex justify-center mt-[150px] max-w-[700px] mx-auto md:pr-0 pr-5'>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart width={500} height={400} data={getData}>
-                    <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip></Tooltip>
-                    <CartesianGrid strokeDasharray="3 3" />
-                </LineChart>
-            </ResponsiveContainer>
+        <div className='container mx-auto'>
+            <div className='flex justify-center mt-[150px] max-w-[700px] mx-auto md:pr-0 pr-5'>
+                <ResponsiveContainer width="100%" height={400}>
+                    <LineChart width={500} height={400} data={getData}>
+                        <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip></Tooltip>
+                        <CartesianGrid strokeDasharray="3 3" />
+                    </LineChart>
+                </ResponsiveContainer>
+            </div>
+            <h1 className='mb-10 text-center text-2xl font-semibold mt-5'>Total Quiz for each topic.</h1>
         </div>
     );
 };
